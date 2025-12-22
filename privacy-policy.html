@@ -6,192 +6,172 @@
     <meta name="description" content="Privacy Policy for SiexMgr - Simple Expense Manager">
     <title>Privacy Policy - SiexMgr</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* --- Professional color system using CSS variables --- */
+        :root {
+            --bg: #f5f7fb;              /* neutral app background */
+            --card: #ffffff;            /* surface */
+            --text: #0f172a;            /* slate-900 */
+            --text-muted: #334155;      /* slate-700 */
+            --subtle: #64748b;          /* slate-500 */
+            --border: #e5e7eb;          /* gray-200 */
+            --primary: #0b5cab;         /* enterprise blue */
+            --primary-600: #0a4f96;     /* hover */
+            --accent: #0ea5e9;          /* cyan accent (sparingly) */
+            --highlight-bg: #eff6ff;    /* subtle info background */
+            --highlight-border: #0b5cab;/* info border */
+            --table-header: #0b5cab;    /* table header */
+            --table-row-alt: #f8fafc;   /* zebra */
+            --focus: #2563eb;           /* focus ring */
+            --shadow: 0 6px 24px rgba(2, 6, 23, 0.08);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
             min-height: 100vh;
-            padding: 20px;
+            padding: 24px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
             padding: 40px;
-            animation: fadeIn 0.6s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @media (max-width: 768px) {
+            .container { padding: 24px; }
+            h1 { font-size: 1.9rem; }
+            h2 { font-size: 1.35rem; }
+            h3 { font-size: 1.1rem; }
         }
+
+        /* --- Typography --- */
+        h1, h2, h3 { font-weight: 700; letter-spacing: -0.01em; }
 
         h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: var(--text);
+            font-size: 2.2rem;
             text-align: center;
-            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .app-name {
             text-align: center;
-            color: #764ba2;
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            color: var(--subtle);
+            font-size: 1rem;
+            margin-bottom: 24px;
             font-weight: 500;
         }
 
         .last-updated {
             text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
+            color: var(--subtle);
+            font-style: normal;
+            margin-bottom: 28px;
+            padding: 10px 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 10px;
         }
 
         h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
         }
 
         h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 600;
+            color: var(--text);
+            font-size: 1.15rem;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            color: #444;
-        }
+        p { margin-bottom: 14px; color: var(--text-muted); text-align: justify; }
+        ul, ol { margin-left: 24px; margin-bottom: 14px; color: var(--text-muted); }
+        li { margin-bottom: 8px; }
 
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
+        strong { color: var(--primary); font-weight: 700; }
 
-        li {
-            margin-bottom: 10px;
-            color: #444;
-        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-600); text-decoration: underline; }
+        a:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
+        /* --- Informational callouts --- */
         .highlight {
-            background: linear-gradient(120deg, #667eea20 0%, #764ba220 100%);
-            padding: 20px;
+            background: var(--highlight-bg);
+            padding: 18px 20px;
             border-radius: 12px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
+            margin: 18px 0;
+            border-left: 4px solid var(--highlight-border);
         }
 
         .contact-info {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
+            background: #f8fafc;
+            color: var(--text);
+            padding: 24px;
             border-radius: 12px;
-            margin-top: 30px;
+            margin-top: 28px;
             text-align: center;
+            border: 1px solid var(--border);
         }
 
         .contact-info a {
-            color: #fff;
-            text-decoration: none;
+            color: var(--primary);
             font-weight: 600;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-            transition: border-color 0.3s ease;
+            border-bottom: 2px solid rgba(11, 92, 171, 0.25);
+            transition: color 0.2s ease, border-color 0.2s ease;
         }
+        .contact-info a:hover { color: var(--primary-600); border-bottom-color: rgba(11, 92, 171, 0.5); }
 
-        .contact-info a:hover {
-            border-bottom-color: #fff;
-        }
-
-        .section-icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        strong {
-            color: #667eea;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 25px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            h3 {
-                font-size: 1.2em;
-            }
-        }
-
+        /* --- Tables --- */
         .data-table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: 8px;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 18px 0;
+            background: var(--card);
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
         }
 
         .data-table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
+            background: var(--table-header);
+            color: #ffffff;
+            padding: 14px 16px;
             text-align: left;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .data-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
         }
 
-        .data-table tr:last-child td {
-            border-bottom: none;
-        }
+        .data-table tr:nth-child(even) td { background: var(--table-row-alt); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover td { background: #eef2f7; }
 
-        .data-table tr:hover {
-            background: #f8f9fa;
+        /* --- Footer --- */
+        .page-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border);
+            text-align: center;
+            color: var(--subtle);
         }
     </style>
 </head>
@@ -301,7 +281,7 @@
             <li><strong>Firebase Cloud Messaging:</strong> Push notifications</li>
             <li><strong>Firebase Storage:</strong> Profile picture storage</li>
         </ul>
-        <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+        <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
 
         <h3>4.2 Other Services</h3>
         <ul>
@@ -409,7 +389,7 @@
         <div class="contact-info">
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
             <p style="margin-top: 15px;">
-                <strong>Email:</strong> <a href="mailto:support@siexmgr.com">support@siexmgr.com</a><br>
+                <strong>Email:</strong> <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a><br>
                 <strong>App:</strong> SiexMgr - Simple Expense Manager<br>
                 <strong>Package ID:</strong> org.lavish.siexmgr
             </p>
@@ -418,7 +398,7 @@
             </p>
         </div>
 
-        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; text-align: center; color: #666;">
+        <div class="page-footer">
             <p><strong>Thank you for trusting SiexMgr with your financial data.</strong></p>
             <p style="font-size: 0.9em; margin-top: 10px;">© 2025 SiexMgr. All rights reserved.</p>
         </div>
