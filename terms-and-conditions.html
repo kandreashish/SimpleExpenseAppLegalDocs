@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - SiEx Manager</title>
+    <meta name="description" content="Terms and Conditions for RozKharcha - Simple Expense Manager">
+    <title>Terms and Conditions - RozKharcha</title>
     <style>
-        /* --- Professional color system (aligned with privacy policy) --- */
         :root {
-            --bg: #f5f7fb;              /* neutral app background */
-            --card: #ffffff;            /* surface */
-            --text: #0f172a;            /* slate-900 */
-            --text-muted: #334155;      /* slate-700 */
-            --subtle: #64748b;          /* slate-500 */
-            --border: #e5e7eb;          /* gray-200 */
-            --primary: #0b5cab;         /* enterprise blue */
-            --primary-600: #0a4f96;     /* hover */
-            --highlight-bg: #eff6ff;    /* info background */
-            --highlight-border: #0b5cab;/* info border */
-            --notice-bg: #fff7ed;       /* notice background */
-            --notice-border: #b45309;   /* notice border */
-            --danger-bg: #fef2f2;       /* warning/danger background */
-            --danger-border: #b91c1c;   /* warning/danger border */
-            --table-row-alt: #f8fafc;   /* zebra */
-            --focus: #2563eb;           /* focus ring */
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text-muted: #334155;
+            --subtle: #64748b;
+            --border: #e2e8f0;
+            --primary: #0b5cab;
+            --primary-600: #0a4f96;
+            --highlight-bg: #eff6ff;
+            --highlight-border: #0b5cab;
+            --notice-bg: #fff7ed;
+            --notice-border: #b45309;
+            --danger-bg: #fef2f2;
+            --danger-border: #b91c1c;
+            --focus: #2563eb;
             --shadow: 0 6px 24px rgba(2, 6, 23, 0.08);
+            --badge-bg: #e0f2fe;
+            --badge-text: #0369a1;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.7;
             color: var(--text);
             background: var(--bg);
-            padding: 24px;
+            padding: 24px 16px;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--card);
             padding: 40px;
@@ -47,20 +48,52 @@
             box-shadow: var(--shadow);
         }
 
+        @media (max-width: 768px) {
+            .container { padding: 24px 18px; }
+            h1 { font-size: 1.85rem; }
+            h2 { font-size: 1.35rem; }
+            h3 { font-size: 1.1rem; }
+        }
+
         h1, h2, h3 { font-weight: 700; letter-spacing: -0.01em; }
 
         h1 {
             color: var(--text);
             font-size: 2.2rem;
-            margin-bottom: 12px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 10px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .app-name {
+            text-align: center;
+            color: var(--subtle);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .badge-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
         }
 
         .last-updated {
+            text-align: center;
             color: var(--subtle);
             margin-bottom: 24px;
-            font-size: 0.95em;
+            font-size: 0.92rem;
             background: #f8fafc;
             border: 1px solid var(--border);
             border-radius: 10px;
@@ -69,7 +102,7 @@
 
         h2 {
             color: var(--primary);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             margin-top: 32px;
             margin-bottom: 12px;
             padding-bottom: 8px;
@@ -87,11 +120,12 @@
         ul, ol { margin-left: 24px; margin-bottom: 14px; color: var(--text-muted); }
         li { margin-bottom: 8px; }
 
+        strong { color: var(--text); font-weight: 700; }
+
         a { color: var(--primary); text-decoration: none; }
         a:hover { color: var(--primary-600); text-decoration: underline; }
         a:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
-        /* Callouts */
         .important {
             background: var(--notice-bg);
             border-left: 4px solid var(--notice-border);
@@ -99,6 +133,7 @@
             margin: 18px 0;
             border-radius: 10px;
         }
+
         .warning {
             background: var(--danger-bg);
             border-left: 4px solid var(--danger-border);
@@ -106,6 +141,7 @@
             margin: 18px 0;
             border-radius: 10px;
         }
+
         .disclaimer {
             background: var(--highlight-bg);
             border-left: 4px solid var(--highlight-border);
@@ -116,14 +152,20 @@
 
         .contact-info {
             background: #f8fafc;
-            padding: 20px;
+            padding: 24px;
             border-radius: 12px;
             margin-top: 30px;
             border: 1px solid var(--border);
             color: var(--text);
+            text-align: center;
         }
-        .contact-info strong { color: var(--primary); }
-        .contact-info a { color: var(--primary); font-weight: 600; border-bottom: 2px solid rgba(11, 92, 171, 0.25); }
+
+        .contact-info a {
+            color: var(--primary);
+            font-weight: 600;
+            border-bottom: 2px solid rgba(11, 92, 171, 0.25);
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
         .contact-info a:hover { color: var(--primary-600); border-bottom-color: rgba(11, 92, 171, 0.5); }
 
         .footer {
@@ -134,479 +176,146 @@
             color: var(--subtle);
             font-size: 0.9em;
         }
-
-        @media (max-width: 768px) {
-            .container { padding: 24px; }
-            h1 { font-size: 1.9rem; }
-            h2 { font-size: 1.35rem; }
-            h3 { font-size: 1.1rem; }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Terms and Conditions</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> December 22, 2025</p>
-
-        <h2>1. Acceptance of Terms</h2>
-        <p>
-            By downloading, installing, or using SiEx Manager ("the App"), you agree to be bound by these Terms and Conditions ("Terms").
-            If you do not agree to these Terms, please do not use the App. Your continued use of the App constitutes acceptance of these Terms.
-        </p>
-
-        <h2>2. Description of Service</h2>
-        <p>SiEx Manager is a personal expense management application that provides the following features:</p>
-        <ul>
-            <li>Track and categorize income and expenses</li>
-            <li>Create and manage transaction records</li>
-            <li>View financial reports and analytics</li>
-            <li>Set and monitor budgets</li>
-            <li>Sync data across multiple devices</li>
-            <li>Export financial data</li>
-        </ul>
-
-        <h2>3. User Accounts</h2>
-
-        <h3>3.1 Account Creation</h3>
-        <ul>
-            <li>You must create an account to use certain features of the App</li>
-            <li>You must provide accurate, current, and complete information during registration</li>
-            <li>You are responsible for maintaining the confidentiality of your account credentials</li>
-            <li>You must be at least 13 years old to create an account</li>
-            <li>One person may not maintain more than one account</li>
-        </ul>
-
-        <h3>3.2 Account Security</h3>
-        <ul>
-            <li>You are solely responsible for all activities that occur under your account</li>
-            <li>You must notify us immediately of any unauthorized access or security breach</li>
-            <li>We reserve the right to suspend or terminate accounts that violate these Terms</li>
-            <li>We are not liable for any loss or damage arising from your failure to protect your account</li>
-        </ul>
-
-        <h2>4. Data and Privacy</h2>
-
-        <h3>4.1 Data Collection</h3>
-        <p>We collect and process the following types of data:</p>
-        <ul>
-            <li>Financial transaction data you voluntarily enter into the App</li>
-            <li>Account information (email, name, profile picture)</li>
-            <li>Usage data and analytics to improve our services</li>
-            <li>Device information and technical data</li>
-        </ul>
-        <p>All data collection and usage is governed by our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-
-        <h3>4.2 Data Storage and Security</h3>
-        <ul>
-            <li>Your data is encrypted both in transit and at rest</li>
-            <li>We use industry-standard security measures to protect your information</li>
-            <li>You retain full ownership of all data you input into the App</li>
-            <li>We do not sell, rent, or share your personal data with third parties for marketing purposes</li>
-        </ul>
-
-        <h3>4.3 Data Backup and Loss</h3>
-        <div class="warning">
-            <strong>Important:</strong>
-            <ul>
-                <li>You are responsible for maintaining backup copies of your data</li>
-                <li>We provide sync functionality but do not guarantee data persistence</li>
-                <li>We are not liable for any data loss, corruption, or unavailability</li>
-                <li>We recommend regularly exporting your data as a backup</li>
-            </ul>
+        <div class="app-name">RozKharcha (Simple Expense Manager)</div>
+        <div class="badge-bar">
+            <span class="badge">Legal Agreement</span>
+            <span class="badge">Terms of Service</span>
+            <span class="badge">Android & iOS</span>
         </div>
+        <p class="last-updated"><strong>Last Updated:</strong> November 2026</p>
 
-        <h2>5. User Responsibilities</h2>
-
-        <h3>5.1 Prohibited Activities</h3>
-        <p>You agree NOT to:</p>
-        <ul>
-            <li>Use the App for any illegal or unauthorized purposes</li>
-            <li>Attempt to breach security or authentication measures</li>
-            <li>Reverse engineer, decompile, or disassemble the App</li>
-            <li>Upload or transmit viruses, malware, or malicious code</li>
-            <li>Impersonate others or misrepresent your identity or affiliation</li>
-            <li>Share your account credentials with third parties</li>
-            <li>Use automated systems or bots to access the App</li>
-            <li>Interfere with or disrupt the App's servers or networks</li>
-            <li>Collect or harvest user information without consent</li>
-            <li>Violate any applicable laws or regulations</li>
-        </ul>
-
-        <h3>5.2 Content Accuracy</h3>
-        <ul>
-            <li>You are solely responsible for the accuracy of financial data you enter</li>
-            <li>We do not verify, monitor, or validate user-entered data</li>
-            <li>The App is a tool; you are responsible for your financial decisions</li>
-            <li>You should maintain independent records of your financial transactions</li>
-        </ul>
-
-        <h2>6. Intellectual Property</h2>
-
-        <h3>6.1 Ownership</h3>
-        <ul>
-            <li>The App and all its content, features, and functionality are owned by us or our licensors</li>
-            <li>All trademarks, logos, service marks, and trade names are our property or our licensors' property</li>
-            <li>You receive a limited, non-exclusive, non-transferable license to use the App</li>
-            <li>This license does not grant you any ownership rights</li>
-        </ul>
-
-        <h3>6.2 User Content</h3>
-        <ul>
-            <li>You retain all ownership rights to the financial data you input</li>
-            <li>You grant us a worldwide, non-exclusive license to process your data to provide services</li>
-            <li>You grant us the right to use aggregated, anonymized data for analytics and improvements</li>
-            <li>You warrant that you have the right to grant these licenses</li>
-        </ul>
-
-        <h2>7. Financial Disclaimer</h2>
-
-        <div class="disclaimer">
-            <h3>7.1 Not Financial Advice</h3>
-            <ul>
-                <li>The App is for personal expense tracking purposes only</li>
-                <li>We do not provide financial, investment, tax, or legal advice</li>
-                <li>All information is provided for informational purposes only</li>
-                <li>You should consult qualified professionals for financial decisions</li>
-                <li>We are not responsible for any financial decisions you make</li>
-            </ul>
-        </div>
-
-        <h3>7.2 Accuracy and Calculations</h3>
-        <ul>
-            <li>We strive for accuracy but make no guarantees or warranties</li>
-            <li>All calculations, reports, and analytics are provided "as is"</li>
-            <li>You should independently verify all financial information</li>
-            <li>We are not liable for errors, omissions, or inaccuracies in calculations</li>
-        </ul>
-
-        <h2>8. Subscription and Payments</h2>
-
-        <h3>8.1 Free and Premium Features</h3>
-        <ul>
-            <li>Basic features are available for free with certain limitations</li>
-            <li>Premium features require a paid subscription</li>
-            <li>Subscription prices are displayed in the App</li>
-            <li>Prices are subject to change with 30 days' notice</li>
-        </ul>
-
-        <h3>8.2 Billing and Auto-Renewal</h3>
-        <ul>
-            <li>Subscriptions automatically renew unless cancelled before the renewal date</li>
-            <li>Billing is handled through app store platforms (Apple App Store, Google Play Store)</li>
-            <li>You will be charged at the beginning of each subscription period</li>
-            <li>Payment methods are managed through your app store account</li>
-        </ul>
-
-        <h3>8.3 Cancellation and Refunds</h3>
-        <ul>
-            <li>You may cancel your subscription at any time through the app store</li>
-            <li>Cancellation takes effect at the end of the current billing period</li>
-            <li>No partial refunds are provided for unused subscription time</li>
-            <li>Refund requests are subject to app store policies</li>
-            <li>We do not process refunds directly; contact your app store for refund requests</li>
-        </ul>
-
-        <h2>9. Third-Party Services</h2>
-
-        <h3>9.1 Integration and APIs</h3>
-        <ul>
-            <li>The App may integrate with third-party services and APIs</li>
-            <li>Third-party services have their own terms of service and privacy policies</li>
-            <li>We are not responsible for third-party service performance or availability</li>
-            <li>We may modify or discontinue third-party integrations at any time</li>
-        </ul>
-
-        <h3>9.2 External Links</h3>
-        <ul>
-            <li>The App may contain links to external websites or resources</li>
-            <li>We are not responsible for the content or practices of external sites</li>
-            <li>Access to external links is at your own risk</li>
-            <li>We do not endorse or make representations about external sites</li>
-        </ul>
-
-        <h2>10. Limitation of Liability</h2>
-
-        <div class="warning">
-            <h3>10.1 Warranty Disclaimer</h3>
-            <p><strong>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong></p>
-            <p>We disclaim all warranties including, but not limited to:</p>
-            <ul>
-                <li>Warranties of merchantability and fitness for a particular purpose</li>
-                <li>Warranties of non-infringement</li>
-                <li>Warranties of accuracy, reliability, or completeness</li>
-                <li>Warranties of uninterrupted or error-free operation</li>
-                <li>Warranties that defects will be corrected</li>
-            </ul>
-        </div>
-
-        <h3>10.2 Liability Limits</h3>
-        <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:</strong></p>
-        <ul>
-            <li>We are not liable for any indirect, incidental, consequential, or punitive damages</li>
-            <li>We are not liable for data loss, financial losses, lost profits, or business interruption</li>
-            <li>We are not liable for unauthorized access to or alteration of your data</li>
-            <li>Our total liability shall not exceed the amount you paid us in the last 12 months</li>
-            <li>Some jurisdictions do not allow limitation of liability, so these limits may not apply to you</li>
-        </ul>
-
-        <h3>10.3 Force Majeure</h3>
-        <p>
-            We are not liable for any failure or delay in performance caused by circumstances beyond our reasonable control, including:
-        </p>
-        <ul>
-            <li>Natural disasters, acts of God, or severe weather</li>
-            <li>War, terrorism, riots, or civil unrest</li>
-            <li>Government actions, laws, or regulations</li>
-            <li>Internet service provider failures or network disruptions</li>
-            <li>Power outages or equipment failures</li>
-            <li>Cyberattacks, hacking, or data breaches beyond our control</li>
-        </ul>
-
-        <h2>11. Indemnification</h2>
-        <p>
-            You agree to indemnify, defend, and hold harmless SiEx Manager, its affiliates, officers, directors, employees, agents,
-            and licensors from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable
-            attorneys' fees) arising from or related to:
-        </p>
-        <ul>
-            <li>Your use or misuse of the App</li>
-            <li>Your violation of these Terms</li>
-            <li>Your violation of any rights of third parties</li>
-            <li>Your violation of any applicable laws or regulations</li>
-            <li>Your user content or data</li>
-            <li>Your negligence or willful misconduct</li>
-        </ul>
-
-        <h2>12. Modifications to Terms</h2>
-
-        <h3>12.1 Changes to Terms</h3>
-        <ul>
-            <li>We reserve the right to modify these Terms at any time</li>
-            <li>Changes will be posted in the App with an updated "Last Updated" date</li>
-            <li>Material changes will be notified via email or in-app notification</li>
-            <li>Continued use after changes constitutes acceptance of modified Terms</li>
-        </ul>
-
-        <h3>12.2 Reviewing Terms</h3>
-        <ul>
-            <li>You should review these Terms periodically for changes</li>
-            <li>If you do not agree with modified Terms, you must stop using the App</li>
-            <li>We may require you to accept updated Terms before continuing to use the App</li>
-        </ul>
-
-        <h2>13. Termination</h2>
-
-        <h3>13.1 Termination by You</h3>
-        <ul>
-            <li>You may stop using the App at any time</li>
-            <li>You may delete your account through the App settings</li>
-            <li>Account deletion is permanent and cannot be undone</li>
-            <li>Certain provisions of these Terms survive termination</li>
-        </ul>
-
-        <h3>13.2 Termination by Us</h3>
-        <p>We may suspend or terminate your access to the App immediately, without notice, if:</p>
-        <ul>
-            <li>You violate these Terms or our policies</li>
-            <li>We are required to do so by law or court order</li>
-            <li>We cease operating the App or a feature</li>
-            <li>Your account has been inactive for an extended period</li>
-            <li>We believe your account has been compromised</li>
-            <li>You engage in fraudulent or illegal activities</li>
-        </ul>
-
-        <h3>13.3 Effect of Termination</h3>
-        <p>Upon termination:</p>
-        <ul>
-            <li>You must immediately stop using the App</li>
-            <li>Your license to use the App is revoked</li>
-            <li>We may delete your data after a reasonable retention period</li>
-            <li>You remain liable for any obligations incurred before termination</li>
-            <li>Provisions regarding liability, indemnification, and dispute resolution survive</li>
-        </ul>
-
-        <h2>14. Dispute Resolution</h2>
-
-        <h3>14.1 Governing Law</h3>
-        <p>
-            These Terms are governed by and construed in accordance with the laws of [Your Jurisdiction],
-            without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction
-            of the courts located in [Your Jurisdiction] for resolution of any disputes.
-        </p>
-
-        <h3>14.2 Informal Resolution</h3>
-        <p>
-            Before filing a formal claim, you agree to contact us and attempt to resolve the dispute informally
-            by sending a detailed notice to our contact email. We will attempt to resolve the dispute within 60 days.
-        </p>
-
-        <h3>14.3 Arbitration Agreement</h3>
         <div class="important">
-            <p><strong>PLEASE READ THIS SECTION CAREFULLY:</strong></p>
+            <p><strong>Please read these Terms carefully.</strong> By downloading, installing, accessing, or using <strong>RozKharcha</strong> ("the App"), provided by Lavish Technologies ("we", "us", or "our"), you agree to be legally bound by these Terms and Conditions. If you do not agree to these Terms, do not install or use the App.</p>
+        </div>
+
+        <h2>1. Description of Service</h2>
+        <p>RozKharcha is a modern, cross-platform personal and household expense management application. Core features include:</p>
+        <ul>
+            <li><strong>Personal Expense Tracking:</strong> Recording, categorizing, tagging, and organizing personal expenses and transactions.</li>
+            <li><strong>Family & Household Sharing:</strong> Shared expense groups allowing authorized family members to pool and monitor household finances together in real time.</li>
+            <li><strong>Offline Guest Mode:</strong> Full local-first expense logging with instant undo and offline aggregation without requiring an account.</li>
+            <li><strong>Voice-Assisted Expense Logging:</strong> Hands-free expense recording using real-time speech recognition.</li>
+            <li><strong>Receipt Scanning & OCR:</strong> Automated parsing of expense details and amounts from receipt images via on-device machine learning.</li>
+            <li><strong>Financial Intelligence & Analytics:</strong> Visual category breakdowns, needs vs. wants indicators, and spending runway estimates.</li>
+            <li><strong>Quick Access Extensions:</strong> Android home screen App Widgets, app shortcuts, and iOS Siri Shortcuts.</li>
+        </ul>
+
+        <h2>2. User Accounts and Authentication</h2>
+
+        <h3>2.1 Guest Mode</h3>
+        <p>You can use the App in Guest Mode without logging in. When using Guest Mode, your transaction records are stored entirely on your local device. You are solely responsible for safeguarding your device and its local data.</p>
+
+        <h3>2.2 Registered Accounts</h3>
+        <ul>
+            <li>To synchronize data across multiple devices or participate in shared Family Groups, you may sign in using supported authentication providers (such as Google Sign-In or Apple Sign-In).</li>
+            <li>You agree to provide accurate information and to keep your authentication credentials secure.</li>
+            <li>You are solely responsible for any activity that occurs under your account.</li>
+            <li>You must be at least 13 years of age (or the applicable age of digital consent in your jurisdiction) to use RozKharcha.</li>
+        </ul>
+
+        <h2>3. Financial Disclaimer</h2>
+        <div class="disclaimer">
+            <p><strong>IMPORTANT FINANCIAL NOTICE:</strong></p>
             <ul>
-                <li>Any disputes not resolved informally shall be resolved through binding arbitration</li>
-                <li>Arbitration is more informal than a lawsuit and uses a neutral arbitrator instead of a judge or jury</li>
-                <li>Arbitration is final and binding, with limited right to appeal</li>
-                <li>You waive your right to participate in a class action lawsuit or class-wide arbitration</li>
-                <li>This arbitration agreement applies to the fullest extent permitted by law</li>
+                <li><strong>RozKharcha is NOT a bank, broker, credit institution, or licensed financial advisor.</strong></li>
+                <li>The App is an informational and organizational bookkeeping tool designed to assist with personal expense tracking.</li>
+                <li>Nothing contained within the App—including category trends, spending alerts, or financial health metrics—constitutes certified financial, investment, legal, or tax advice.</li>
+                <li>You are solely responsible for verifying the accuracy of all numbers, amounts, and receipts before making financial commitments.</li>
             </ul>
         </div>
 
-        <h3>14.4 Class Action Waiver</h3>
-        <p>
-            You agree to resolve disputes with us on an individual basis only, not as part of any class,
-            consolidated, or representative action. You waive any right to participate as a plaintiff or
-            class member in any class action proceeding.
-        </p>
-
-        <h3>14.5 Exceptions</h3>
-        <p>The following disputes are not subject to arbitration:</p>
+        <h2>4. User Responsibilities & Acceptable Use</h2>
+        <p>You agree to use RozKharcha only for lawful, personal, and household financial management purposes. You agree NOT to:</p>
         <ul>
-            <li>Disputes related to intellectual property rights</li>
-            <li>Claims for injunctive or equitable relief</li>
-            <li>Disputes that must be brought in small claims court</li>
+            <li>Use the App for any illegal, fraudulent, or unauthorized purpose.</li>
+            <li>Interfere with, disrupt, or compromise the integrity of our cloud infrastructure or APIs.</li>
+            <li>Attempt to reverse engineer, decompile, decrypt, or derive the source code of the App.</li>
+            <li>Transmit malicious code, viruses, automated bots, or scrapers into the service.</li>
+            <li>Harass, misrepresent, or share unlawful or infringing content within shared Family Groups.</li>
+            <li>Circumvent or tamper with authentication, encryption, or security measures.</li>
         </ul>
 
-        <h2>15. General Provisions</h2>
-
-        <h3>15.1 Entire Agreement</h3>
-        <p>
-            These Terms, together with our Privacy Policy, constitute the entire agreement between you and us
-            regarding the App and supersede all prior agreements and understandings.
-        </p>
-
-        <h3>15.2 Severability</h3>
-        <p>
-            If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining
-            provisions shall remain in full force and effect. The invalid provision shall be modified to the
-            minimum extent necessary to make it valid and enforceable.
-        </p>
-
-        <h3>15.3 Waiver</h3>
-        <p>
-            Our failure to enforce any right or provision of these Terms does not constitute a waiver of that
-            right or provision. Any waiver must be in writing and signed by an authorized representative.
-        </p>
-
-        <h3>15.4 Assignment</h3>
+        <h2>5. Shared Family Groups</h2>
+        <p>RozKharcha allows users to create and join shared Family Groups for collective budgeting:</p>
         <ul>
-            <li>You may not assign or transfer these Terms or your account without our written consent</li>
-            <li>We may assign these Terms to any affiliate or successor without restriction</li>
-            <li>Any attempted assignment in violation of this section is void</li>
+            <li>Transactions you designate as <strong>Family Expenses</strong> are shared with and visible to all verified members of that family group.</li>
+            <li>Personal transactions remain private to your individual account.</li>
+            <li>You should invite and share family access only with people you trust. We are not responsible for disputes or financial disagreements arising between members of a family group.</li>
         </ul>
 
-        <h3>15.5 No Agency</h3>
-        <p>
-            These Terms do not create any agency, partnership, joint venture, employment, or franchise relationship
-            between you and us.
-        </p>
+        <h2>6. Intellectual Property Rights</h2>
+        <ul>
+            <li><strong>App Ownership:</strong> RozKharcha, including its user interface design, logos, trademarks, code, algorithms, and documentation, is the exclusive intellectual property of Lavish Technologies and its licensors.</li>
+            <li><strong>Limited License:</strong> We grant you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the App on compatible personal devices solely for your personal use.</li>
+            <li><strong>Your Data:</strong> You retain complete ownership of the financial records and content you enter into the App. You grant us the limited license necessary to store, transmit, and process your data to operate the service.</li>
+        </ul>
 
-        <h3>15.6 Language</h3>
-        <p>
-            These Terms are written in English. Any translations are provided for convenience only. In case of
-            conflict, the English version prevails.
-        </p>
+        <h2>7. Data Privacy and Third-Party Services</h2>
+        <p>Our collection, processing, and handling of your data are governed by our <a href="privacy-policy.html">Privacy Policy</a>, which is incorporated by reference into these Terms. By using the App, you also consent to our data practices as described in the Privacy Policy.</p>
 
-        <h3>15.7 Electronic Communications</h3>
-        <p>
-            By using the App, you consent to receive electronic communications from us. These communications may
-            include notices about your account, promotional messages, and other information. You agree that all
-            agreements, notices, and other communications sent electronically satisfy any legal requirement that
-            such communications be in writing.
-        </p>
-
-        <h2>16. Contact Information</h2>
-
-        <div class="contact-info">
-            <p>For questions, concerns, or complaints about these Terms and Conditions, please contact us at:</p>
-            <p><strong>Email:</strong> <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a></p>
-            <p><strong>App Name:</strong> Expense Tracker : Nestly</p>
-            <p><strong>Developer:</strong> Lavish Technologies</p>
-            <p><strong>Response Time:</strong> We aim to respond within 48-72 hours</p>
+        <h2>8. Limitation of Liability</h2>
+        <div class="warning">
+            <p><strong>PLEASE READ CAREFULLY:</strong></p>
+            <p><strong>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</strong></p>
+            <ul>
+                <li>To the maximum extent permitted by law, Lavish Technologies and its contributors disclaim all warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
+                <li>We do not guarantee that the App will operate uninterrupted, bug-free, or without loss of data.</li>
+                <li>In no event shall we be liable for any indirect, incidental, special, consequential, or punitive damages, or loss of profits, data, or business, arising out of your use or inability to use the App.</li>
+                <li>Our total aggregate liability for all claims related to the App shall not exceed the amount you paid (if any) to use the App in the twelve (12) months preceding the event giving rise to liability.</li>
+            </ul>
         </div>
 
-        <h2>17. Special Provisions for iOS Users</h2>
-        <p>If you access the App through the Apple App Store, you acknowledge and agree that:</p>
+        <h2>9. Account Termination & Data Deletion</h2>
         <ul>
-            <li>These Terms are between you and us, not Apple Inc.</li>
-            <li>Apple has no obligation to provide support or maintenance for the App</li>
-            <li>Apple is not responsible for addressing any claims relating to the App or your use of it</li>
-            <li>Apple is not responsible for product liability claims, consumer protection claims, or intellectual property infringement claims</li>
-            <li>Apple is a third-party beneficiary of these Terms and may enforce them</li>
-            <li>You must comply with all applicable third-party terms when using the App</li>
-            <li>You must comply with the Apple Media Services Terms and Conditions</li>
+            <li><strong>By You:</strong> You may discontinue using RozKharcha at any time. You can permanently delete your account and all associated cloud data directly within the App under <strong>Profile → Account Settings → Delete Account</strong>, or by emailing <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a>.</li>
+            <li><strong>By Us:</strong> We reserve the right to suspend or terminate accounts that violate these Terms, engage in abuse, or threaten the security of the service.</li>
         </ul>
 
-        <h2>18. Special Provisions for Android Users</h2>
-        <p>If you access the App through Google Play, you acknowledge and agree that:</p>
+        <h2>10. Platform-Specific Terms</h2>
+
+        <h3>10.1 Apple App Store (iOS)</h3>
+        <p>If you downloaded RozKharcha from the Apple App Store:</p>
         <ul>
-            <li>These Terms are between you and us, not Google LLC</li>
-            <li>Google has no obligation to provide support or maintenance for the App</li>
-            <li>Google is not responsible for any claims relating to the App</li>
-            <li>You must comply with the Google Play Terms of Service</li>
-            <li>You must comply with any applicable third-party terms of service</li>
+            <li>These Terms are between you and Lavish Technologies, not Apple Inc.</li>
+            <li>Apple has no obligation whatsoever to furnish any maintenance or support services for the App.</li>
+            <li>Apple is not responsible for addressing any claims relating to the App or your possession and use of the App.</li>
+            <li>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms and have the right to enforce them against you.</li>
         </ul>
 
-        <h2>19. Children's Privacy</h2>
-        <p>
-            The App is not intended for children under the age of 13. We do not knowingly collect personal
-            information from children under 13. If you are a parent or guardian and believe your child has
-            provided us with personal information, please contact us immediately. We will take steps to
-            delete such information from our systems.
-        </p>
-        <p>
-            For users between 13 and 18 years of age, we recommend obtaining parental consent before using
-            the App and entering financial information.
-        </p>
-
-        <h2>20. Accessibility</h2>
-        <p>
-            We strive to make the App accessible to all users, including those with disabilities. If you
-            encounter accessibility barriers or have suggestions for improvement, please contact us at
-            <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a>.
-        </p>
-
-        <h2>21. Export Controls</h2>
-        <p>
-            The App may be subject to export control laws and regulations. You agree to comply with all
-            applicable export and re-export control laws and regulations, including the Export Administration
-            Regulations maintained by the U.S. Department of Commerce. You represent that you are not located
-            in a country subject to embargo or trade restrictions.
-        </p>
-
-        <h2>22. Updates and Maintenance</h2>
+        <h3>10.2 Google Play Store (Android)</h3>
+        <p>If you downloaded RozKharcha from Google Play:</p>
         <ul>
-            <li>We may release updates, bug fixes, and new features periodically</li>
-            <li>Updates may be required for continued use of the App</li>
-            <li>We may perform scheduled or emergency maintenance</li>
-            <li>The App may be temporarily unavailable during maintenance</li>
-            <li>We are not liable for any disruption caused by updates or maintenance</li>
+            <li>These Terms are between you and Lavish Technologies, not Google LLC.</li>
+            <li>Your use of the App must comply with the then-current Google Play Terms of Service.</li>
         </ul>
 
-        <h2>23. Feedback and Suggestions</h2>
-        <p>
-            If you provide us with feedback, suggestions, or ideas about the App, you grant us a worldwide,
-            perpetual, irrevocable, royalty-free license to use, modify, and incorporate such feedback without
-            compensation or attribution to you.
-        </p>
+        <h2>11. Modifications to Terms</h2>
+        <p>We reserve the right to modify or replace these Terms at our discretion. When updates occur, we will revise the "Last Updated" date at the top of this document. Continued use of RozKharcha following notice of revisions constitutes acceptance of the updated Terms.</p>
 
-        <h2>24. Survival</h2>
-        <p>The following sections survive termination of these Terms:</p>
-        <ul>
-            <li>Intellectual Property (Section 6)</li>
-            <li>Financial Disclaimer (Section 7)</li>
-            <li>Limitation of Liability (Section 10)</li>
-            <li>Indemnification (Section 11)</li>
-            <li>Dispute Resolution (Section 14)</li>
-            <li>General Provisions (Section 15)</li>
-        </ul>
+        <h2>12. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of India, without giving effect to any principles of conflicts of law. Any legal action or proceeding arising out of or related to these Terms or the App shall be brought exclusively in the courts having competent jurisdiction in India.</p>
+
+        <h2>13. Contact Information</h2>
+        <div class="contact-info">
+            <p>If you have any questions or inquiries regarding these Terms and Conditions, please contact us:</p>
+            <p style="margin-top: 15px;">
+                <strong>Application:</strong> RozKharcha (Simple Expense Manager)<br>
+                <strong>Developer:</strong> Lavish Technologies / Ashish Kandre<br>
+                <strong>Package Identifier:</strong> <code>org.lavish.siexmgr</code><br>
+                <strong>Email:</strong> <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a>
+            </p>
+        </div>
 
         <div class="footer">
-            <p><strong>By using SiEx Manager, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</strong></p>
-            <p style="margin-top: 20px;">© 2025 Expense Tracker : Nestly. All rights reserved.</p>
+            <p><strong>Thank you for choosing RozKharcha for your personal and household expense management.</strong></p>
+            <p style="margin-top: 15px;">© 2026 RozKharcha / Lavish Technologies. All rights reserved.</p>
             <p><a href="privacy-policy.html">Privacy Policy</a> | Terms and Conditions</p>
         </div>
     </div>
 </body>
 </html>
-

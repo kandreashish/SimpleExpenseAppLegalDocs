@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Expense Tracker : Nestly">
-    <title>Privacy Policy - SiEx Manager</title>
+    <meta name="description" content="Privacy Policy for RozKharcha - Simple Expense Manager">
+    <title>Privacy Policy - RozKharcha</title>
     <style>
-        /* --- Professional color system using CSS variables --- */
         :root {
-            --bg: #f5f7fb;              /* neutral app background */
-            --card: #ffffff;            /* surface */
-            --text: #0f172a;            /* slate-900 */
-            --text-muted: #334155;      /* slate-700 */
-            --subtle: #64748b;          /* slate-500 */
-            --border: #e5e7eb;          /* gray-200 */
-            --primary: #0b5cab;         /* enterprise blue */
-            --primary-600: #0a4f96;     /* hover */
-            --accent: #0ea5e9;          /* cyan accent (sparingly) */
-            --highlight-bg: #eff6ff;    /* subtle info background */
-            --highlight-border: #0b5cab;/* info border */
-            --table-header: #0b5cab;    /* table header */
-            --table-row-alt: #f8fafc;   /* zebra */
-            --focus: #2563eb;           /* focus ring */
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text-muted: #334155;
+            --subtle: #64748b;
+            --border: #e2e8f0;
+            --primary: #0b5cab;
+            --primary-600: #0a4f96;
+            --accent: #0ea5e9;
+            --highlight-bg: #eff6ff;
+            --highlight-border: #0b5cab;
+            --table-header: #0b5cab;
+            --table-row-alt: #f8fafc;
+            --focus: #2563eb;
             --shadow: 0 6px 24px rgba(2, 6, 23, 0.08);
+            --badge-bg: #e0f2fe;
+            --badge-text: #0369a1;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,11 +34,11 @@
             color: var(--text);
             background: var(--bg);
             min-height: 100vh;
-            padding: 24px;
+            padding: 24px 16px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--card);
             border: 1px solid var(--border);
@@ -47,13 +48,12 @@
         }
 
         @media (max-width: 768px) {
-            .container { padding: 24px; }
-            h1 { font-size: 1.9rem; }
+            .container { padding: 24px 18px; }
+            h1 { font-size: 1.85rem; }
             h2 { font-size: 1.35rem; }
             h3 { font-size: 1.1rem; }
         }
 
-        /* --- Typography --- */
         h1, h2, h3 { font-weight: 700; letter-spacing: -0.01em; }
 
         h1 {
@@ -66,9 +66,26 @@
         .app-name {
             text-align: center;
             color: var(--subtle);
-            font-size: 1rem;
-            margin-bottom: 24px;
-            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .badge-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
         }
 
         .last-updated {
@@ -80,12 +97,13 @@
             background: #f8fafc;
             border: 1px solid var(--border);
             border-radius: 10px;
+            font-size: 0.92rem;
         }
 
         h2 {
             color: var(--primary);
-            font-size: 1.6rem;
-            margin-top: 28px;
+            font-size: 1.5rem;
+            margin-top: 32px;
             margin-bottom: 12px;
             padding-bottom: 8px;
             border-bottom: 2px solid var(--border);
@@ -94,7 +112,7 @@
         h3 {
             color: var(--text);
             font-size: 1.15rem;
-            margin-top: 18px;
+            margin-top: 20px;
             margin-bottom: 8px;
         }
 
@@ -102,18 +120,17 @@
         ul, ol { margin-left: 24px; margin-bottom: 14px; color: var(--text-muted); }
         li { margin-bottom: 8px; }
 
-        strong { color: var(--primary); font-weight: 700; }
+        strong { color: var(--text); font-weight: 700; }
 
         a { color: var(--primary); text-decoration: none; }
         a:hover { color: var(--primary-600); text-decoration: underline; }
         a:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
-        /* --- Informational callouts --- */
         .highlight {
             background: var(--highlight-bg);
             padding: 18px 20px;
             border-radius: 12px;
-            margin: 18px 0;
+            margin: 20px 0;
             border-left: 4px solid var(--highlight-border);
         }
 
@@ -122,7 +139,7 @@
             color: var(--text);
             padding: 24px;
             border-radius: 12px;
-            margin-top: 28px;
+            margin-top: 30px;
             text-align: center;
             border: 1px solid var(--border);
         }
@@ -135,7 +152,6 @@
         }
         .contact-info a:hover { color: var(--primary-600); border-bottom-color: rgba(11, 92, 171, 0.5); }
 
-        /* --- Tables --- */
         .data-table {
             width: 100%;
             border-collapse: separate;
@@ -145,18 +161,19 @@
             border-radius: 10px;
             overflow: hidden;
             border: 1px solid var(--border);
+            font-size: 0.95rem;
         }
 
         .data-table th {
             background: var(--table-header);
             color: #ffffff;
-            padding: 14px 16px;
+            padding: 12px 14px;
             text-align: left;
             font-weight: 700;
         }
 
         .data-table td {
-            padding: 12px 16px;
+            padding: 12px 14px;
             border-bottom: 1px solid var(--border);
             color: var(--text-muted);
         }
@@ -165,242 +182,174 @@
         .data-table tr:last-child td { border-bottom: none; }
         .data-table tr:hover td { background: #eef2f7; }
 
-        /* --- Footer --- */
         .page-footer {
             margin-top: 40px;
             padding-top: 20px;
             border-top: 2px solid var(--border);
             text-align: center;
             color: var(--subtle);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <div class="app-name">Expense Tracker : Nestly</div>
-        <div class="last-updated">Last Updated: December 22, 2025</div>
+        <div class="app-name">RozKharcha (Simple Expense Manager)</div>
+        <div class="badge-bar">
+            <span class="badge">Android & iOS</span>
+            <span class="badge">Offline-First</span>
+            <span class="badge">Privacy-Focused</span>
+        </div>
+        <div class="last-updated">Last Updated: November 2026</div>
 
         <div class="highlight">
-            <p><strong>Your privacy is important to us.</strong> This Privacy Policy explains how SiEx Manager ("we", "our", or "us") collects, uses, and protects your personal information when you use our mobile application.</p>
+            <p><strong>Your financial privacy is our top priority.</strong> This Privacy Policy describes how <strong>RozKharcha</strong> ("we", "our", or "us", operated by Lavish Technologies) collects, handles, stores, and protects your information when you use our mobile application across Android and iOS platforms.</p>
+            <p style="margin-bottom: 0;"><strong>Summary:</strong> We never sell your personal or financial data. You can track expenses entirely offline without an account. When cloud features are enabled, all data transmission and storage adhere to strict industry-standard encryption protocols.</p>
         </div>
 
         <h2>1. Information We Collect</h2>
-        
-        <h3>1.1 Personal Information</h3>
-        <p>When you use SiEx Manager, we may collect the following types of personal information:</p>
-        
+
+        <h3>1.1 Offline & Guest Mode Data</h3>
+        <p>You can use RozKharcha completely offline in Guest Mode without creating an account or providing any personal information:</p>
+        <ul>
+            <li><strong>Local Expense Records:</strong> Transaction amounts, dates, categories, and optional descriptions you log are stored exclusively in an encrypted Room/SQLite database on your local device.</li>
+            <li><strong>No Cloud Sync in Guest Mode:</strong> Unless you explicitly choose to authenticate and sync, your guest expense records never leave your physical device.</li>
+        </ul>
+
+        <h3>1.2 Authenticated Account Information</h3>
+        <p>When you sign in to sync your expenses across devices or participate in shared family/household expenses, we collect:</p>
         <table class="data-table">
             <thead>
                 <tr>
                     <th>Data Type</th>
                     <th>Purpose</th>
-                    <th>Storage</th>
+                    <th>Storage & Transmission</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Email Address</strong></td>
-                    <td>Account creation and authentication via Google Sign-In</td>
-                    <td>Firebase Authentication</td>
+                    <td><strong>Google / Apple Identity</strong></td>
+                    <td>Secure sign-in, account creation, and user identification</td>
+                    <td>Firebase Authentication (OAuth 2.0)</td>
                 </tr>
                 <tr>
-                    <td><strong>Profile Information</strong></td>
-                    <td>Display name and profile picture</td>
-                    <td>Firebase Storage & Local Device</td>
+                    <td><strong>Profile Details (Name, Email, Picture)</strong></td>
+                    <td>Personalize your experience and display member identities in shared Family Groups</td>
+                    <td>Encrypted Cloud Storage & Local Cache</td>
                 </tr>
                 <tr>
-                    <td><strong>Expense Data</strong></td>
-                    <td>Track and manage your financial expenses</td>
-                    <td>Encrypted Local Database & Cloud Sync</td>
+                    <td><strong>Expense & Budget Records</strong></td>
+                    <td>Personal expense management, budget tracking, and real-time synchronization</td>
+                    <td>Encrypted Database (AES-256 local, TLS 1.3 in transit)</td>
                 </tr>
                 <tr>
-                    <td><strong>Authentication Tokens</strong></td>
-                    <td>Maintain secure session and sync data</td>
-                    <td>Encrypted Local Storage</td>
+                    <td><strong>Family / Household Group Data</strong></td>
+                    <td>Facilitate shared expense pooling among invited household members</td>
+                    <td>Encrypted Cloud Backend</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>1.2 Automatically Collected Information</h3>
+        <h3>1.3 Device Permissions & Hardware Usage</h3>
+        <p>RozKharcha requests only the permissions strictly required to provide its features:</p>
         <ul>
-            <li><strong>Device Information:</strong> Device model, operating system version, and unique device identifiers</li>
-            <li><strong>Usage Analytics:</strong> App usage patterns, feature interactions, and crash reports via Firebase Analytics</li>
-            <li><strong>Log Data:</strong> Error logs and diagnostic information to improve app performance</li>
+            <li><strong>Microphone (Voice Expense Input):</strong> RozKharcha provides hands-free voice logging. The microphone is accessed <em>only while you actively interact with the voice input button</em>. Audio is converted to text using on-device speech recognition or native platform speech APIs. <strong>Audio recordings are never saved, uploaded, or transmitted to our servers or third parties.</strong></li>
+            <li><strong>Camera & Photo Library (Receipt Scanning / OCR):</strong> When you choose to scan a physical receipt or pick a receipt image, the app uses on-device optical character recognition (OCR) via Google ML Kit. <strong>Receipt images are processed entirely on your device and are never sent to external servers or marketing databases.</strong></li>
+            <li><strong>Notifications:</strong> Used only with your explicit permission to deliver helpful budget alerts, family expense updates, or scheduled expense reminders.</li>
+        </ul>
+
+        <h3>1.4 Diagnostics & Usage Analytics</h3>
+        <p>To ensure app reliability, performance, and user satisfaction, we use privacy-conscious analytics tools (Mixpanel and Firebase):</p>
+        <ul>
+            <li><strong>Privacy-Preserving Telemetry:</strong> In compliance with strict privacy standards, we <strong>do not log exact expense amounts, transaction descriptions, voice transcripts, or financial credentials</strong>. Telemetry uses aggregate range buckets (e.g., amount buckets, word counts) and pseudonymous device identifiers.</li>
+            <li><strong>Crash Diagnostics:</strong> We collect crash reports, error stack traces, and device OS specifications via Firebase Crashlytics to diagnose and resolve software bugs promptly.</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
-        <p>We use the collected information for the following purposes:</p>
+        <p>We process your data solely for the following legitimate purposes:</p>
         <ul>
-            <li><strong>Account Management:</strong> Create and manage your user account</li>
-            <li><strong>Authentication:</strong> Verify your identity using Google Sign-In</li>
-            <li><strong>Data Synchronization:</strong> Sync your expense data across multiple devices</li>
-            <li><strong>App Functionality:</strong> Provide core features such as expense tracking, categorization, and reporting</li>
-            <li><strong>Personalization:</strong> Remember your preferences (last used category, recent currencies)</li>
-            <li><strong>Analytics:</strong> Understand app usage patterns to improve user experience</li>
-            <li><strong>Push Notifications:</strong> Send important updates and reminders (with your permission)</li>
-            <li><strong>Customer Support:</strong> Respond to your inquiries and provide technical assistance</li>
+            <li><strong>Core Expense Management:</strong> Calculating daily, weekly, and monthly totals, categorization, and visual financial charts.</li>
+            <li><strong>Household / Family Collaboration:</strong> Displaying shared expenses to authenticated members of your chosen family group.</li>
+            <li><strong>Multi-Device Synchronization:</strong> Keeping your expense records consistent across multiple phones or tablets.</li>
+            <li><strong>Smart Categorization & Insights:</strong> Offering instant category suggestions and spending runway metrics based on your logging habits.</li>
+            <li><strong>Customer Support:</strong> Troubleshooting issues and responding to inquiries submitted to our support team.</li>
         </ul>
 
-        <h2>3. Data Storage and Security</h2>
+        <h2>3. Data Storage, Security, and Protection</h2>
         
         <h3>3.1 Encryption</h3>
         <div class="highlight">
-            <p><strong>We take security seriously.</strong> All sensitive data is encrypted:</p>
-            <ul>
-                <li><strong>Android:</strong> AES-256 encryption using Android Keystore</li>
-                <li><strong>iOS:</strong> AES-256 encryption using iOS Keychain</li>
-                <li><strong>In Transit:</strong> All data transmitted to our servers uses HTTPS/TLS encryption</li>
+            <p><strong>Security by Design:</strong></p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>Data at Rest:</strong> Local authentication tokens and confidential settings are encrypted using Android Keystore and iOS Keychain.</li>
+                <li><strong>Data in Transit:</strong> All communication between RozKharcha and cloud servers is strictly encrypted using TLS 1.3 / HTTPS.</li>
+                <li><strong>Database Integrity:</strong> Backend databases employ industry-standard encryption, strict access control, and firewalls.</li>
             </ul>
         </div>
 
-        <h3>3.2 Data Storage Locations</h3>
-        <ul>
-            <li><strong>Local Device:</strong> Encrypted expense data, user preferences, and cached profile information</li>
-            <li><strong>Firebase Cloud Services:</strong> Authentication data, profile pictures, and synchronized expense data</li>
-            <li><strong>Secure Servers:</strong> Backend API data stored on secure cloud infrastructure</li>
-        </ul>
+        <h3>3.2 Data Isolation</h3>
+        <p>Personal expenses remain completely private to your individual account. In shared Family Groups, only transactions you explicitly mark as <em>Family Expenses</em> are visible to verified members of your family group.</p>
 
-        <h3>3.3 Security Measures</h3>
+        <h2>4. Third-Party Service Providers</h2>
+        <p>We work exclusively with vetted, industry-leading service providers who comply with stringent privacy standards:</p>
         <ul>
-            <li>Industry-standard encryption protocols (AES-256)</li>
-            <li>Secure authentication via Google Sign-In (OAuth 2.0)</li>
-            <li>Regular security audits and updates</li>
-            <li>Access controls and authentication tokens</li>
-            <li>Encrypted data transmission (HTTPS/TLS)</li>
-        </ul>
-
-        <h2>4. Third-Party Services</h2>
-        <p>SiEx Manager integrates with the following third-party services that may collect and process your data:</p>
-
-        <h3>4.1 Google Services</h3>
-        <ul>
-            <li><strong>Google Sign-In:</strong> For authentication and account creation</li>
-            <li><strong>Firebase Authentication:</strong> Secure user authentication management</li>
-            <li><strong>Firebase Analytics:</strong> App usage analytics and crash reporting</li>
-            <li><strong>Firebase Cloud Messaging:</strong> Push notifications</li>
-            <li><strong>Firebase Storage:</strong> Profile picture storage</li>
-        </ul>
-        <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-
-        <h3>4.2 Other Services</h3>
-        <ul>
-            <li><strong>Cloud Infrastructure:</strong> For backend API and data synchronization</li>
-            <li><strong>Analytics Tools:</strong> To understand app performance and user behavior</li>
+            <li><strong>Google Firebase & Google Cloud:</strong> Secure authentication (Google Sign-In), cloud database, push notifications, and crash diagnostics. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+            <li><strong>Apple Inc.:</strong> Apple Sign-In and App Store subscription verification. (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>)</li>
+            <li><strong>Mixpanel:</strong> Privacy-first product usage analytics using anonymized metrics without financial details. (<a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener">Mixpanel Privacy Policy</a>)</li>
         </ul>
 
         <h2>5. Data Sharing and Disclosure</h2>
-        <p><strong>We do not sell, trade, or rent your personal information to third parties.</strong></p>
-        
-        <p>We may share your information only in the following circumstances:</p>
+        <p><strong>We will never sell, rent, monetize, or trade your personal or financial data to advertisers, data brokers, or third parties.</strong></p>
+        <p>Information is shared only under these narrow conditions:</p>
         <ul>
-            <li><strong>With Your Consent:</strong> When you explicitly authorize us to share specific information</li>
-            <li><strong>Service Providers:</strong> With trusted third-party service providers (e.g., Firebase, cloud hosting) who assist in operating our app</li>
-            <li><strong>Legal Requirements:</strong> When required by law, court order, or government regulation</li>
-            <li><strong>Protection of Rights:</strong> To protect our rights, privacy, safety, or property, and that of our users</li>
-            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets (users will be notified)</li>
+            <li><strong>Within Your Family Group:</strong> With family members you have explicitly authorized by creating or joining a household.</li>
+            <li><strong>Trusted Infrastructure Providers:</strong> Strictly as required to operate the cloud infrastructure (Firebase/cloud host) under confidentiality agreements.</li>
+            <li><strong>Legal Obligations:</strong> If mandated by law, court order, or official regulatory process.</li>
         </ul>
 
         <h2>6. Your Rights and Choices</h2>
-        <p>You have the following rights regarding your personal data:</p>
-
-        <h3>6.1 Access and Control</h3>
+        
+        <h3>6.1 Complete Data Control</h3>
         <ul>
-            <li><strong>Access:</strong> View and download your personal data</li>
-            <li><strong>Correction:</strong> Update or correct inaccurate information</li>
-            <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
-            <li><strong>Export:</strong> Export your expense data in a portable format</li>
+            <li><strong>Access & Export:</strong> You can view all your logged transactions anytime within the app.</li>
+            <li><strong>Correction:</strong> You have full control to edit or update any transaction, budget, or profile detail directly.</li>
+            <li><strong>Instant Undo & Deletion:</strong> Delete single transactions, clear local guest databases, or remove family records at your discretion.</li>
         </ul>
 
-        <h3>6.2 Privacy Settings</h3>
-        <ul>
-            <li><strong>Push Notifications:</strong> Enable or disable notifications in app settings</li>
-            <li><strong>Analytics:</strong> Opt-out of analytics tracking (may limit some features)</li>
-            <li><strong>Data Sync:</strong> Control whether your data syncs across devices</li>
-        </ul>
-
-        <h3>6.3 Account Deletion</h3>
-        <p>To delete your account and all associated data:</p>
+        <h3>6.2 Account & Data Deletion</h3>
+        <p>You have the absolute right to permanently delete your account and all associated cloud data at any time:</p>
         <ol>
-            <li>Open the SiEx Manager app</li>
-            <li>Go to Settings → Account Settings</li>
-            <li>Select "Delete Account"</li>
-            <li>Confirm your decision</li>
+            <li>Open <strong>RozKharcha</strong> and navigate to <strong>Profile / Settings</strong>.</li>
+            <li>Select <strong>Account Settings</strong> → <strong>Delete Account</strong>.</li>
+            <li>Confirm your request. All associated user profile records, authentication credentials, and cloud-synced personal expense records will be permanently purged within 30 days.</li>
         </ol>
-        <p>Alternatively, contact us at the email address provided below. Upon account deletion, all your personal data will be permanently removed from our servers within 30 days.</p>
+        <p>Alternatively, you may request account and data deletion by emailing our support team at <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a> with the subject line "Data Deletion Request".</p>
 
-        <h2>7. Data Retention</h2>
-        <p>We retain your personal information for as long as necessary to:</p>
-        <ul>
-            <li>Provide our services and maintain your account</li>
-            <li>Comply with legal obligations</li>
-            <li>Resolve disputes and enforce our agreements</li>
-        </ul>
-        <p>When you delete your account, we will delete or anonymize your personal data within 30 days, except where retention is required by law.</p>
+        <h2>7. Children's Privacy</h2>
+        <p>RozKharcha is intended for general audiences and is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information without parental consent, please contact us and we will promptly remove such information.</p>
 
-        <h2>8. Children's Privacy</h2>
-        <p>SiEx Manager is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately, and we will delete such information from our systems.</p>
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect feature enhancements, new platform capabilities, or legal requirements. Material changes will be accompanied by an updated "Last Updated" date at the top of this page and, where appropriate, an in-app notice. Continued use of RozKharcha after updates signifies acceptance of the revised terms.</p>
 
-        <h2>9. International Data Transfers</h2>
-        <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. By using SiEx Manager, you consent to the transfer of your information to our facilities and service providers globally.</p>
-
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any material changes by:</p>
-        <ul>
-            <li>Posting the updated policy in the app</li>
-            <li>Updating the "Last Updated" date at the top of this policy</li>
-            <li>Sending a notification through the app or email (for significant changes)</li>
-        </ul>
-        <p>Your continued use of SiEx Manager after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
-
-        <h2>11. Cookies and Tracking Technologies</h2>
-        <p>SiEx Manager may use cookies and similar tracking technologies to:</p>
-        <ul>
-            <li>Maintain your login session</li>
-            <li>Remember your preferences</li>
-            <li>Analyze app usage and performance</li>
-            <li>Improve user experience</li>
-        </ul>
-        <p>You can manage cookie preferences through your device settings, though disabling certain cookies may limit app functionality.</p>
-
-        <h2>12. California Privacy Rights (CCPA)</h2>
-        <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
-        <ul>
-            <li>Right to know what personal information is collected</li>
-            <li>Right to know whether personal information is sold or disclosed</li>
-            <li>Right to say no to the sale of personal information</li>
-            <li>Right to access your personal information</li>
-            <li>Right to request deletion of personal information</li>
-            <li>Right to non-discrimination for exercising your privacy rights</li>
-        </ul>
-        <p><strong>Note:</strong> We do not sell your personal information.</p>
-
-        <h2>13. GDPR Compliance (European Users)</h2>
-        <p>If you are located in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR):</p>
-        <ul>
-            <li><strong>Legal Basis:</strong> We process your data based on consent, contract performance, and legitimate interests</li>
-            <li><strong>Data Portability:</strong> Request your data in a machine-readable format</li>
-            <li><strong>Right to Object:</strong> Object to processing of your personal data</li>
-            <li><strong>Automated Decision-Making:</strong> We do not use automated decision-making or profiling</li>
-            <li><strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local data protection authority</li>
-        </ul>
-
-        <h2>14. Contact Us</h2>
+        <h2>9. Contact Us</h2>
         <div class="contact-info">
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+            <p>If you have questions, feedback, or concerns regarding this Privacy Policy or your data, please contact us:</p>
             <p style="margin-top: 15px;">
-                <strong>Email:</strong> <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a><br>
-                <strong>App:</strong>Expense Tracker : Nestly<br>
-                <strong>Package ID:</strong>org.lavish.siexmgr
+                <strong>Application:</strong> RozKharcha (Simple Expense Manager)<br>
+                <strong>Developer:</strong> Lavish Technologies / Ashish Kandre<br>
+                <strong>Package Identifier:</strong> <code>org.lavish.siexmgr</code><br>
+                <strong>Email:</strong> <a href="mailto:kashishcool144@gmail.com">kashishcool144@gmail.com</a>
             </p>
-            <p style="margin-top: 15px; font-size: 0.9em;">
-                We will respond to your inquiry within 30 days.
+            <p style="margin-top: 15px; font-size: 0.9em; color: var(--subtle);">
+                We are committed to resolving your privacy inquiries promptly within 48 to 72 business hours.
             </p>
         </div>
 
         <div class="page-footer">
-            <p><strong>Thank you for trusting SiEx Manager with your financial data.</strong></p>
-            <p style="font-size: 0.9em; margin-top: 10px;">© 2025 SiEx Manager. All rights reserved.</p>
+            <p><strong>RozKharcha — Smart, Private, and Simple Expense Management.</strong></p>
+            <p style="font-size: 0.9em; margin-top: 10px;">© 2026 RozKharcha / Lavish Technologies. All rights reserved.</p>
+            <p style="margin-top: 8px;"><a href="terms-and-conditions.html">Terms and Conditions</a> | Privacy Policy</p>
         </div>
     </div>
 </body>
